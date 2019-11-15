@@ -1,0 +1,17 @@
+version: '3'
+services:
+  wp:
+    build: .
+    ports:
+      - 8000:80
+    environment:
+      WORDPRESS_DB_PASSWORD: qwerty
+    volumes:
+      - ./html:/var/www/html
+  mysql:
+    image: mariadb:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: qwerty
+      MYSQL_DATABASE: wordpress
+    volumes:
+      - ./database:/var/lib/mysql
