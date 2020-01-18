@@ -1,0 +1,4 @@
+dockerHub:
+  account: xilution
+  repository: custom-wordpress
+version: 1.0.0
