@@ -1,11 +1,17 @@
 clean:
-	rm -rf db site
+	bash ./scripts/clean.sh
 
 start:
-	docker-compose up --build -d
+	bash ./scripts/start.sh
 
 stop:
-	docker-compose down
+	bash ./scripts/stop.sh
 
 open:
-	open http://localhost:8080
+	bash ./scripts/open.sh
+
+test-e2e:
+	bash ./scripts/run-e2e-tests.sh http://localhost:8080
+
+lint:
+	bash ./scripts/lint.sh
