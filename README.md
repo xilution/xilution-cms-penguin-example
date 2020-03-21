@@ -17,3 +17,7 @@ Run `make open`.
 ## To Stop
 
 Run `make stop`.
+
+## To Run E2E Tests
+
+Run `make test-e2e`.

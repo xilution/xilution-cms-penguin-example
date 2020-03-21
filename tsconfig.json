@@ -14,11 +14,11 @@
     "paths": {
       "*": [
         "*",
-        "test/*"
+        "tests/*"
       ]
     }
   },
   "include": [
-    "test/**/*"
+    "tests/**/*"
   ]
 }

@@ -1,3 +1,3 @@
 #!/bin/bash
 
-rm -rf db site
+rm -rf db site output
