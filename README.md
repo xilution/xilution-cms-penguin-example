@@ -8,6 +8,8 @@ Run `make clean`.
 
 Run `make start`.
 
+Note: it may take a minute or two for the site to finish starting.
+
 ## To Open Site in Browser
 
 Run `make open`.
