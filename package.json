@@ -1,0 +1,14 @@
+{
+  "name": "@xilution/xilution-wordpress-docker",
+  "version": "1.0.0",
+  "description": "Xilution Wordpress",
+  "main": "index.js",
+  "repository": "git@github.com:xilution/xilution-wordpress-docker.git",
+  "author": "Todd Brunia <tbrunia@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "devDependencies": {
+    "codeceptjs": "^2.5.0",
+    "puppeteer": "^2.1.1"
+  }
+}
