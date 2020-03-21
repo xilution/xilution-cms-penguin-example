@@ -5,7 +5,7 @@ stop:
 	docker-compose down
 
 clean:
-	rm -rf database html
+	rm -rf db site
 
 open:
-	open http://localhost:8000
+	open http://localhost:8080

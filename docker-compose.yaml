@@ -3,15 +3,15 @@ services:
   wp:
     build: .
     ports:
-      - 8000:80
+      - 8080:80
     environment:
-      WORDPRESS_DB_PASSWORD: qwerty
+      WORDPRESS_DB_PASSWORD: secret
     volumes:
-      - ./html:/var/www/html
+      - ./site:/var/www/html
   mysql:
     image: mariadb:latest
     environment:
-      MYSQL_ROOT_PASSWORD: qwerty
+      MYSQL_ROOT_PASSWORD: secret
       MYSQL_DATABASE: wordpress
     volumes:
-      - ./database:/var/lib/mysql
+      - ./db:/var/lib/mysql

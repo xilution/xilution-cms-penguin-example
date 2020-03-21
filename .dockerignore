@@ -1,4 +1,3 @@
 .idea
-.terraform
-database
-html
+db
+site
