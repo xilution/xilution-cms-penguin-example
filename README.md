@@ -18,6 +18,18 @@ Run `make open`.
 
 Run `make stop`.
 
-## To Run E2E Tests
+## To Run End to End Tests
 
-Run `make test-e2e`.
+Run `make e2e-tests`.
+
+## To View the End to End Test Report
+
+Run `make e2e-test-report`
+
+## To Run Load Tests
+
+Run `make load-tests`.
+
+## To View the Load Test Report
+
+Run `make load-test-report`
