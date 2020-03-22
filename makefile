@@ -1,11 +1,14 @@
 clean:
-	bash ./scripts/clean.sh
+	rm -rf db site output
+
+lint:
+	tslint -p tsconfig.json -c tslint.json
 
 start:
-	bash ./scripts/start.sh
+	docker-compose up --build -d
 
 stop:
-	bash ./scripts/stop.sh
+	docker-compose down
 
 open:
 	open http://localhost:8080
@@ -21,6 +24,3 @@ load-tests:
 
 load-test-report:
 	open ./output/load/report.html
-
-lint:
-	bash ./scripts/lint.sh
