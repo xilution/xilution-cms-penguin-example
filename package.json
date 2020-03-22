@@ -6,7 +6,7 @@
   "repository": "git@github.com:xilution/xilution-wordpress-docker.git",
   "author": "Todd Brunia <tbrunia@gmail.com>",
   "license": "MIT",
-  "private": true,
+  "private": false,
   "devDependencies": {
     "artillery": "^1.6.0",
     "codeceptjs": "^2.5.0",

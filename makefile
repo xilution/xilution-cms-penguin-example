@@ -2,7 +2,7 @@ clean:
 	rm -rf db site output
 
 lint:
-	tslint -p tsconfig.json -c tslint.json
+	npx tslint -p tsconfig.json -c tslint.json
 
 start:
 	docker-compose up --build -d
