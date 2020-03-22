@@ -2,3 +2,16 @@ dockerHub:
   account: xilution
   repository: custom-wordpress
 version: 1.0.0
+tests:
+  e2e:
+    commands:
+      - nvm install
+      - yarn install
+      - bash ./scripts/run-e2e-tests.sh $WORDPRESS_SITE_BASE_URL
+    pathToOutput: ./output/e2e
+  load:
+    commands:
+      - nvm install
+      - yarn install
+      - bash ./scripts/run-load-tests.sh $WORDPRESS_SITE_BASE_URL
+    pathToOutput: ./output/load
