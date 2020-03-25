@@ -6,24 +6,8 @@ tests:
   e2e:
     commands:
       - yarn install
-      - export TS_NODE_PROJECT=$CODEBUILD_SRC_DIR_SourceCode/tests/e2e/tsconfig.json
-      - |
-        npx codeceptjs run \
-          --config $CODEBUILD_SRC_DIR_SourceCode/codecept.json \
-          --override "{ \"helpers\": { \"Puppeteer\": { \"url\": \"$WORDPRESS_SITE_BASE_URL\" } } }" \
-          --steps \
-          --reporter mocha-multi
+      - bash ./scripts/run-e2e-tests.sh $WORDPRESS_SITE_BASE_URL
   load:
     commands:
       - yarn install
-      - mkdir -p $CODEBUILD_SRC_DIR_SourceCode/output/load
-      - |
-        npx artillery run \
-          --config $CODEBUILD_SRC_DIR_SourceCode/artillery.conf.yaml \
-          --output $CODEBUILD_SRC_DIR_SourceCode/output/load/report.json \
-          --overrides "{ \"config\": { \"target\": \"$BASE_URL\" } }" \
-          $CODEBUILD_SRC_DIR_SourceCode/tests/load/scenarios.yaml
-      - |
-        npx artillery report \
-          --output $CODEBUILD_SRC_DIR_SourceCode/output/load/report.html \
-          $CODEBUILD_SRC_DIR_SourceCode/output/load/report.json
+      - bash ./scripts/run-load-tests.sh $WORDPRESS_SITE_BASE_URL
