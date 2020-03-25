@@ -6,7 +6,7 @@ scripts
 site
 tests
 .nvmrc
-codecept.conf.js
+codecept.json
 docker-compose.yaml
 Makefile
 package.json

@@ -9,7 +9,7 @@ tests:
       - export TS_NODE_PROJECT=$CODEBUILD_SRC_DIR_SourceCode/tests/e2e/tsconfig.json
       - |
         npx codeceptjs run \
-          --config $CODEBUILD_SRC_DIR_SourceCode/codecept.conf.js \
+          --config $CODEBUILD_SRC_DIR_SourceCode/codecept.json \
           --override "{ \"helpers\": { \"Puppeteer\": { \"url\": \"$WORDPRESS_SITE_BASE_URL\" } } }" \
           --steps \
           --reporter mocha-multi
