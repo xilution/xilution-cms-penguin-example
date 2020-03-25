@@ -15,7 +15,7 @@ open:
 
 e2e-tests:
 	bash ./scripts/start-server.sh
-	bash ./scripts/run-e2e-tests.sh http://localhost:8080
+	bash ./scripts/run-e2e-tests.sh http://localhost:8080 /Applications/Chromium.app/Contents/MacOS/Chromium
 	bash ./scripts/stop-server.sh
 
 e2e-test-report:

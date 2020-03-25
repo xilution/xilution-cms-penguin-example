@@ -6,9 +6,10 @@
             "url": "http://localhost:8080",
             "show": false,
             "chrome": {
-                "executablePath": "/usr/bin/chromium-browser",
+                "executablePath": "/Applications/Chromium.app/Contents/MacOS/Chromium",
                 "args": [
-                    "--no-sandbox"
+                    "--no-sandbox",
+                    "--disable-dev-shm-usage"
                 ]
             }
         }
