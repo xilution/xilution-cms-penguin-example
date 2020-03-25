@@ -4,7 +4,13 @@
     "helpers": {
         "Puppeteer": {
             "url": "http://localhost:8080",
-            "show": false
+            "show": false,
+            "chrome": {
+                "executablePath": "/usr/bin/chromium-browser",
+                "args": [
+                    "--no-sandbox"
+                ]
+            }
         }
     },
     "include": {},
