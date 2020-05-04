@@ -7,7 +7,13 @@ tests:
     commands:
       - yarn install
       - bash ./scripts/run-e2e-tests.sh $WORDPRESS_SITE_BASE_URL $PATH_TO_CHROMIUM
+    excludeStages:
+      - Test
+      - Prod
   load:
     commands:
       - yarn install
       - bash ./scripts/run-load-tests.sh $WORDPRESS_SITE_BASE_URL
+    excludeStages:
+      - Test
+      - Prod
