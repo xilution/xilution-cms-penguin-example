@@ -2,6 +2,12 @@ version: 1.0.0
 dockerHub:
   account: xilution
   repository: custom-wordpress
+data:
+  seed:
+    - source: s3://xilution-penguin-63b846e8-data-transfer/export/db/2020-05-03T20:54:34.289Z
+      target: db/
+    - source: s3://xilution-penguin-63b846e8-data-transfer/export/site/wp-content/uploads/2020-05-03T20:59:58.185Z
+      target: site/wp-content/uploads/
 tests:
   e2e:
     commands:
@@ -10,6 +16,7 @@ tests:
     excludeStages:
       - Test
       - Prod
+    outputPath: ./output/e2e/**/*
   load:
     commands:
       - yarn install
@@ -17,3 +24,4 @@ tests:
     excludeStages:
       - Test
       - Prod
+    outputPath: ./output/load/**/*
