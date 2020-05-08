@@ -1,27 +1,27 @@
 version: 1.0.0
+productCode: xilution-cms-penguin
 dockerHub:
   account: xilution
   repository: custom-wordpress
 data:
   seed:
-    - source: s3://xilution-penguin-63b846e8-data-transfer/export/db/2020-05-03T20:54:34.289Z
-      target: db/
-    - source: s3://xilution-penguin-63b846e8-data-transfer/export/site/wp-content/uploads/2020-05-03T20:59:58.185Z
-      target: site/wp-content/uploads/
+    mappings:
+      - source: s3://xilution-penguin-63b846e8-data-transfer/export/db/2020-05-03T20:54:34.289Z
+        target: db/
+      - source: s3://xilution-penguin-63b846e8-data-transfer/export/site/wp-content/uploads/2020-05-03T20:59:58.185Z
+        target: site/wp-content/uploads/
 tests:
-  e2e:
+  - name: End to End Tests
     commands:
       - yarn install
-      - bash ./scripts/run-e2e-tests.sh $WORDPRESS_SITE_BASE_URL $PATH_TO_CHROMIUM
+      - bash scripts/run-e2e-tests.sh $WORDPRESS_SITE_BASE_URL $PATH_TO_CHROMIUM
     excludeStages:
       - Test
-      - Prod
-    outputPath: ./output/e2e/**/*
-  load:
+    outputPath: output/e2e/**/*
+  - name: Load Tests
     commands:
       - yarn install
-      - bash ./scripts/run-load-tests.sh $WORDPRESS_SITE_BASE_URL
+      - bash scripts/run-load-tests.sh $WORDPRESS_SITE_BASE_URL
     excludeStages:
       - Test
-      - Prod
-    outputPath: ./output/load/**/*
+    outputPath: output/load/**/*
