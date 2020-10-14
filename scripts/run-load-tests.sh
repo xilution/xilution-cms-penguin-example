@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -ex
 
 BASE_URL=$1
 

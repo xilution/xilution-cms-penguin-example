@@ -41,7 +41,7 @@
             }
         }
     },
-    "name": "xilution-wordpress-docker",
+    "name": "xilution-cms-penguin-example",
     "require": [
         "ts-node/register"
     ],

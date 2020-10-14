@@ -1,4 +1,4 @@
-# xilution-wordpress-docker
+# xilution-cms-penguin-example
 
 ## Prerequisites
 

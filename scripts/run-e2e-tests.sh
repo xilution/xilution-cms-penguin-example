@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -ex
 
 base_url=$1
 path_to_chromium=$2
