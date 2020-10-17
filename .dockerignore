@@ -13,5 +13,5 @@ package.json
 README.md
 tsconfig.json
 tslint.json
-xilution.yaml
-yarn.lock
+xilution.json
+package-lock.json

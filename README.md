@@ -4,13 +4,12 @@
 
 * [Docker](https://www.docker.com/)
 * [NVM](https://github.com/nvm-sh/nvm)
-* [Yarn](https://yarnpkg.com/)
 
 ## First Things First
 
 Run `nvm install` to install the proper version of NodeJS.
 
-Run `yarn install` to install NodeJS dependencies used for testing.
+Run `npm install` to install NodeJS dependencies used for testing.
 
 ## To Clean
 
