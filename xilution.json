@@ -4,6 +4,11 @@
     "account": "xilution",
     "repository": "custom-wordpress"
   },
+  "data": {
+    "seed": {
+      "mappings": []
+    }
+  },
   "tests": {
     "Test": [
       {
