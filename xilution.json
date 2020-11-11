@@ -19,28 +19,22 @@
       ]
     }
   },
-  "tests": [
-    {
-      "name": "End to End Tests",
-      "commands": [
-        "npm install",
-        "bash scripts/run-e2e-tests.sh $WORDPRESS_SITE_BASE_URL $PATH_TO_CHROMIUM"
-      ],
-      "excludeStages": [
-        "Test"
-      ],
-      "outputPath": "output/e2e/**/*"
-    },
-    {
-      "name": "Load Tests",
-      "commands": [
-        "npm install",
-        "bash scripts/run-load-tests.sh $WORDPRESS_SITE_BASE_URL"
-      ],
-      "excludeStages": [
-        "Test"
-      ],
-      "outputPath": "output/load/**/*"
-    }
-  ]
+  "tests": {
+    "Test": [
+      {
+        "name": "End to End Tests",
+        "commands": [
+          "npm install",
+          "bash scripts/run-e2e-tests.sh $WORDPRESS_SITE_BASE_URL $PATH_TO_CHROMIUM"
+        ]
+      },
+      {
+        "name": "Load Tests",
+        "commands": [
+          "npm install",
+          "bash scripts/run-load-tests.sh $WORDPRESS_SITE_BASE_URL"
+        ]
+      }
+    ]
+  }
 }
