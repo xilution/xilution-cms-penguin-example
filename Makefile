@@ -5,10 +5,10 @@ lint:
 	npx tslint -p tsconfig.json -c tslint.json
 
 start:
-	docker-compose up --build -d
+	docker compose up --build -d
 
 stop:
-	docker-compose down
+	docker compose down
 
 open:
 	open http://localhost:8080
